@@ -15,6 +15,7 @@ eureka:
       defaultZone: http://${SELMAG_EUREKA_SVC_SERVICE_HOST}:${SELMAG_EUREKA_SVC_SERVICE_PORT}/eureka/
 server:
   ssl:
+    enabled: true
     trust-certificate: |
       -----BEGIN CERTIFICATE-----
       MIIDbzCCAlegAwIBAgIQTkoqIfHfO2FM48uxfBoAtDANBgkqhkiG9w0BAQsFADBL
