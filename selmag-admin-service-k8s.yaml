@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: https://auth.selm.ag/realms/selmag
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.selm.ag/realms/selmag
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${SELMAG_EUREKA_SVC_SERVICE_HOST}:${SELMAG_EUREKA_SVC_SERVICE_PORT}/eureka/
