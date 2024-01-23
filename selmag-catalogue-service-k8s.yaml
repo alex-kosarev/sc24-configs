@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://catalogue-db-svc:5432/catalogue
+    username: catalogue
+    password: catalogue
+  config:
+    import: 'optional:configserver:'
+  flyway:
+    schemas:
+      - catalogue
+  boot:
+    admin:
+      client:
+        enabled: false
+  security:
+    oauth2:
+      client:
+        jwt:
+          issuer-uri: https://auth.selm.ag/realms/selmag
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+  info:
+    env:
+      enabled: true
+  tracing:
+    enabled: true
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://selmag-eureka-svc:8761/eureka/
