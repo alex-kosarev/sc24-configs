@@ -2,6 +2,22 @@ spring:
   security:
     oauth2:
       client:
+        registration:
+          keycloak-login:
+            client-id: admin-service
+            client-secret: xPeqUPFVyY7p8lOOrEsUSjTnV0Un7YwF
+            authorization-grant-type: authorization_code
+            provider: keycloak
+            scope:
+              - openid
+              - microprofile-jwt
+          keycloak-client:
+            client-id: admin-service
+            client-secret: xPeqUPFVyY7p8lOOrEsUSjTnV0Un7YwF
+            authorization-grant-type: client_credentials
+            provider: keycloak
+            scope:
+              - metrics
         provider:
           keycloak:
             issuer-uri: https://auth.selm.ag/realms/selmag
