@@ -28,4 +28,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${SELMAG_EUREKA_SVC_SERVICE_HOST}:${SELMAG_EUREKA_SVC_SERVICE_PORT}/eureka/
+      defaultZone: http://selmag-eureka-svc:8761/eureka/
