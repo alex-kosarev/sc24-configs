@@ -12,6 +12,10 @@ spring:
         jwt:
           issuer-uri: https://auth.selm.ag/realms/selmag
 management:
+  metrics:
+    mongo:
+      command:
+        enabled: false
   endpoints:
     web:
       exposure:
