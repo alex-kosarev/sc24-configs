@@ -1,0 +1,44 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.selm.ag/realms/selmag
+      client:
+        provider:
+          keycloak:
+            issuer-uri: https://auth.selm.ag/realms/selmag
+            user-info-authentication-method: bearer
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: manager-app
+            client-secret: jAvbRzDmL130wxyxoOnhpYvPPTf5j0Vg
+            scope:
+              - openid
+              - microprofile-jwt
+          metrics:
+            client-id: manager-app-metrics
+            client-secret: N2afq4q9iAFvbUalBZwerVZOx8T5KQUR
+            provider: keycloak
+            authorization-grant-type: client_credentials
+            scope:
+              - metrics
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-svc:8761/eureka/
+    enabled: true
+  instance:
+    prefer-ip-address: true
+management:
+  info:
+    env:
+      enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://tempo-svc:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true
