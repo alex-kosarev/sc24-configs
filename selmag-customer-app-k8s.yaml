@@ -32,6 +32,10 @@ eureka:
   instance:
     prefer-ip-address: true
 management:
+  metrics:
+    mongo:
+      command:
+        enabled: true
   endpoints:
     web:
       exposure:
