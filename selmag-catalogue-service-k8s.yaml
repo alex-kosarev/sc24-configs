@@ -26,6 +26,9 @@ management:
       enabled: true
   tracing:
     enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://tempo-svc:9411/api/v2/spans
 eureka:
   client:
     enabled: true
