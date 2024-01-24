@@ -34,3 +34,13 @@ eureka:
     enabled: true
     serviceUrl:
       defaultZone: http://selmag-eureka-svc:8761/eureka/
+keycloak:
+  uri: https://auth.selm.ag
+springdoc:
+  swagger-ui:
+    oauth:
+      app-name: catalogue-swagger-ui
+      client-id: catalogue-swagger-ui
+      client-secret: O2gKU6kEAlNuxFjh16zPkREPIbe9IvVd
+      use-pkce-with-authorization-code-grant: true
+      use-basic-authentication-with-access-code-grant: true
