@@ -1,0 +1,44 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://reviews-db-svc:27017/reviews-db
+  boot:
+    admin:
+      client:
+        enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://auth.selm.ag/realms/selmag
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+  info:
+    env:
+      enabled: true
+  tracing:
+    enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://tempo-svc:9411/api/v2/spans
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://selmag-eureka-svc:8761/eureka/
+keycloak:
+  uri: https://auth.selm.ag
+springdoc:
+  swagger-ui:
+    oauth:
+      app-name: reviews-swagger-ui
+      client-id: reviews-swagger-ui
+      client-secret: clkSFrigY1zUbTU7u9aFm2b4bbDRqrTo
+      use-pkce-with-authorization-code-grant: true
+      use-basic-authentication-with-access-code-grant: true
