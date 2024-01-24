@@ -26,6 +26,8 @@ spring:
         jwt:
           issuer-uri: https://auth.selm.ag/realms/selmag
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://selmag-eureka-svc:8761/eureka/

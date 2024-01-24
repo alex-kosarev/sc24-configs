@@ -30,6 +30,8 @@ management:
     tracing:
       endpoint: http://tempo-svc:9411/api/v2/spans
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     enabled: true
     serviceUrl:
