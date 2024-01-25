@@ -1,4 +1,11 @@
 spring:
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://selmag-admin-server-svc:8080
+        instance:
+          service-host-type: ip
   datasource:
     url: jdbc:postgresql://catalogue-db-svc:5432/catalogue
     username: catalogue
@@ -6,10 +13,6 @@ spring:
   flyway:
     schemas:
       - catalogue
-  boot:
-    admin:
-      client:
-        enabled: false
   security:
     oauth2:
       resourceserver:

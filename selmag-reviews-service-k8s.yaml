@@ -1,11 +1,14 @@
 spring:
-  data:
-    mongodb:
-      uri: mongodb://reviews-db-svc:27017/reviews-db
   boot:
     admin:
       client:
-        enabled: false
+        enabled: true
+        url: http://selmag-admin-server-svc:8080
+        instance:
+          service-host-type: ip
+  data:
+    mongodb:
+      uri: mongodb://reviews-db-svc:27017/reviews-db
   security:
     oauth2:
       resourceserver:
