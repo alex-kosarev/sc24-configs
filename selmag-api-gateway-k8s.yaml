@@ -59,7 +59,7 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-svc.default:8761/eureka/
+      defaultZone: http://selmag.eureka-svc.default:8761/eureka/
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
