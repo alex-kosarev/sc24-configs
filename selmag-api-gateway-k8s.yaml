@@ -7,19 +7,19 @@ spring:
     gateway:
       routes:
         - id: catalogue-api-route
-          uri: lb://catalogue-service
+          uri: lb://selmag-catalogue-service
           predicates:
             - Host=catalogue.api.selm.ag
         - id: reviews-api-route
-          uri: lb://reviews-service
+          uri: lb://selmag-reviews-service
           predicates:
             - Host=reviews.api.selm.ag
         - id: manager-app-route
-          uri: lb://manager-app
+          uri: lb://selmag-manager-app
           predicates:
             - Host=manager.selm.ag
         - id: customer-app-route
-          uri: lb://customer-app
+          uri: lb://selmag-customer-app
           predicates:
             - Host=customer.selm.ag
   security:
