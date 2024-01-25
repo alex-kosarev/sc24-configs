@@ -29,5 +29,6 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
+    enabled: false
     serviceUrl:
       defaultZone: http://selmag-eureka-svc:8761/eureka/

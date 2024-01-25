@@ -1,4 +1,11 @@
 spring:
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://selmag-admin-server-svc:8080
+        instance:
+          service-host-type: ip
   cloud:
     loadbalancer:
       enabled: false
