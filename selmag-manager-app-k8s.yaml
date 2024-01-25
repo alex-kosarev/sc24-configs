@@ -3,7 +3,7 @@ spring:
     admin:
       client:
         enabled: true
-        url: http://admin-service-svc:8080
+        url: http://selmag-admin-server-svc:8080
         instance:
           service-host-type: ip
   cloud:
