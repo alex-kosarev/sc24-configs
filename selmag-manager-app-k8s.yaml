@@ -1,4 +1,7 @@
 spring:
+  cloud:
+    loadbalancer:
+      enabled: false
   security:
     oauth2:
       resourceserver:
