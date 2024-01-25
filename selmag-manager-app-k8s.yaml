@@ -1,4 +1,11 @@
 spring:
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://admin-service-svc:8080
+        instance:
+          service-host-type: ip
   cloud:
     loadbalancer:
       enabled: false
