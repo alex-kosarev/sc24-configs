@@ -15,6 +15,18 @@ spring:
       - catalogue
   security:
     oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: catalogue-service
+            client-secret: 6SgV6OWCy6Pbb7frlfz6gRjbzjMvph6s
+            authorization-grant-type: client_credentials
+            scope:
+              - metrics
+        provider:
+          keycloak:
+            issuer-uri: https://auth.selm.ag/realms/selmag
+            user-name-attribute: preferred_username
       resourceserver:
         jwt:
           issuer-uri: https://auth.selm.ag/realms/selmag
