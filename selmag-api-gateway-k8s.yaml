@@ -52,14 +52,14 @@ management:
       enabled: true
   zipkin:
     tracing:
-      endpoint: http://tempo-svc:9411/api/v2/spans
+      endpoint: http://tempo-svc.default:9411/api/v2/spans
   tracing:
     sampling:
       probability: 1.0
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-svc:8761/eureka/
+      defaultZone: http://eureka-svc.default:8761/eureka/
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
